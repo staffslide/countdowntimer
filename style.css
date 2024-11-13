@@ -2,8 +2,9 @@
 body {
   align-content: center;
   background-color: white;
-  color: white;
+  color: black;
   gap: 42px;
+  justify-items: center;
 }
 
 .input-wrapper {
