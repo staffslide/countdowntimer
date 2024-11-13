@@ -1,24 +1,21 @@
-let countdown = setInterval(function(){
-    const now = new Date()  //今の日時
-    const target = new Date(now.getFullYear(), now.getMonth() + 1, 0,'23','59','59') //ターゲット日時を取得
-    const remainTime = target - now  //差分を取る（ミリ秒で返ってくる
+const hour = document.getElementById("hour");
+const min = document.getElementById("min");
+const sec = document.getElementById("sec");
 
-    //指定の日時を過ぎていたら処理をしない
-    if(remainTime < 0) return false 
+function countdown() {
+  const now = new Date(); // 現在時刻を取得
+  const tomorrow = new Date(now.getFullYear(),now.getMonth(),now.getDate()+1); // 明日の0:00を取得
+  const diff = tomorrow.getTime() - now.getTime(); // 時間の差を取得（ミリ秒）
 
-    //差分の日・時・分・秒を取得
-    const difDay  = Math.floor(remainTime / 1000 / 60 / 60 / 24)
-    const difHour = Math.floor(remainTime / 1000 / 60 / 60 ) % 24
-    const difMin  = Math.floor(remainTime / 1000 / 60) % 60
-    const difSec  = Math.floor(remainTime / 1000) % 60
+  // ミリ秒から単位を修正
+  const calcHour = Math.floor(diff / 1000 / 60 / 60);
+  const calcMin = Math.floor(diff / 1000 / 60) % 60;
+  const calcSec = Math.floor(diff / 1000) % 60;
 
-    //残りの日時を上書き
-    document.getElementById("countdown-day").textContent  = difDay
-    document.getElementById("countdown-hour").textContent = difHour
-    document.getElementById("countdown-min").textContent  = difMin
-    document.getElementById("countdown-sec").textContent  = difSec
-
-    //指定の日時になればカウントを止める
-    if(remainTime < 0) clearInterval(countdown)
-
-}, 1000)  
+  // 取得した時間を表示（2桁表示）
+  hour.innerHTML = calcHour < 10 ? '0' + calcHour : calcHour;
+  min.innerHTML = calcMin < 10 ? '0' + calcMin : calcMin;
+  sec.innerHTML = calcSec < 10 ? '0' + calcSec : calcSec;
+}
+countdown();
+setInterval(countdown,1000);
