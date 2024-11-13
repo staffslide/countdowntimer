@@ -1,4 +1,8 @@
 /* スタイル調整 */
+html {
+  height: 100%;
+}
+
 body {
   align-content: center;
   background-color: white;
