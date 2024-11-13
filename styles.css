@@ -18,6 +18,11 @@ html, body {
   padding: 2rem;
 }
 
+p {
+  /* 水平方向の中央揃え */
+  text-align: center;
+}
+
 #hour,#min,#sec {
   font-size: 3rem;
   margin-right: 1rem;
