@@ -27,7 +27,7 @@ function countDown(unixEndDate) {
   }
 }
 
-const datetime = document.getElementById('datetime');
+const datetime = document.getElementById('targettime');
 
 window.addEventListener('DOMContentLoaded', function(){
   setInterval(() => {
