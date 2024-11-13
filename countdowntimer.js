@@ -1,21 +1,37 @@
-const hour = document.getElementById("hour");
-const min = document.getElementById("min");
-const sec = document.getElementById("sec");
+const day = document.getElementById('day');
+const hour = document.getElementById('hour');
+const minute = document.getElementById('minute');
+const second = document.getElementById('second');
 
-function countdown() {
-  const now = new Date(); // 現在時刻を取得
-  const tomorrow = new Date(now.getFullYear(),now.getMonth(),now.getDate()+1); // 明日の0:00を取得
-  const diff = tomorrow.getTime() - now.getTime(); // 時間の差を取得（ミリ秒）
-
-  // ミリ秒から単位を修正
-  const calcHour = Math.floor(diff / 1000 / 60 / 60);
-  const calcMin = Math.floor(diff / 1000 / 60) % 60;
-  const calcSec = Math.floor(diff / 1000) % 60;
-
-  // 取得した時間を表示（2桁表示）
-  hour.innerHTML = calcHour < 10 ? '0' + calcHour : calcHour;
-  min.innerHTML = calcMin < 10 ? '0' + calcMin : calcMin;
-  sec.innerHTML = calcSec < 10 ? '0' + calcSec : calcSec;
+function countDown(unixEndDate) {
+  // 現時刻をUnixTimeで取得
+  const unixCurrentDate = Date.parse(new Date().toISOString());
+  // 目標時刻と現時刻の差をUnixTimeで計算
+  let leftDate = unixEndDate - unixCurrentDate;
+  // 目標時刻と現時刻の差から残り時間を計算
+  let leftDayDate = Math.floor(leftDate / (1000 * 60 * 60 * 24));
+  let leftHourDate = Math.floor((leftDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  let leftMinuteDate = Math.floor((leftDate % (1000 * 60 * 60)) / (1000 * 60));
+  let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
+  // 残り時間を表示させる
+  if (leftDate < 0){
+    day.innerHTML = "0";
+    hour.innerHTML = "0";
+    minute.innerHTML = "0";
+    second.innerHTML = "0";
+  } else {
+    day.innerHTML = `${leftDayDate}`;
+    hour.innerHTML = `${leftHourDate}`;
+    minute.innerHTML = `${leftMinuteDate}`;
+    second.innerHTML = `${leftSecondDate}`;
+  }
 }
-countdown();
-setInterval(countdown,1000);
+
+const datetime = document.getElementById('datetime');
+
+window.addEventListener('DOMContentLoaded', function(){
+  setInterval(() => {
+    let unixEndDate = datetime.value ? Date.parse(datetime.value) : null;
+    countDown(unixEndDate)
+  }, 1000)
+});
