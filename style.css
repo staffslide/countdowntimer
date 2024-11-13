@@ -11,6 +11,7 @@ body {
   color: black;
   gap: 4px;
   padding: 16px;
+  height: 10%;
 }
 
 input[type="datetime-local"] {
@@ -20,12 +21,12 @@ input[type="datetime-local"] {
 }
 
 .countdown-wrapper {
-  flex-grow: 1;
   align-content: center;
   align-items: center;
   justify-content: center;
   color: black;
   display: flex;
+  height: 90%;
   
   & > .time {
     border-radius: 8px;
