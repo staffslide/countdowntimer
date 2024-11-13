@@ -1,9 +1,14 @@
 /* スタイル調整 */
+html {
+  height: 100%;
+}
+
 body {
   align-content: center;
   background-color: white;
   gap: 42px;
   justify-items: center;
+  height: 100%;
 }
 
 .input-wrapper {
