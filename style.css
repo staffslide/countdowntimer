@@ -1,16 +1,9 @@
 /* スタイル調整 */
 body {
   align-content: center;
-  background-color: #212529;
+  background-color: white;
   color: white;
-  display: grid;
   gap: 42px;
-  height: calc(100vh - 40px);
-  justify-items: center;
-  margin: 0;
-  padding: 20px 0;
-  width: 100vw;
-  color-scheme: dark;
 }
 
 .input-wrapper {
