@@ -1,15 +1,20 @@
-<div class="input-wrapper">
-  <label>ゴール</label>
-  <input type="datetime-local" id="datetime"/>
-</div>
-<div class="countdown-wrapper">
-  <span>残り</span>
-  <span id="day" class="time"></span>
-  <span class="unit">日</span>
-  <span id="hour" class="time"></span>
-  <span class="unit">時間</span>
-  <span id="minute" class="time"></span>
-  <span class="unit">分</span>
-  <span id="second" class="time"></span>
-  <span class="unit">秒</span>
-<div>
+<!DOCTYPE html>
+<html labg="en">
+<head>
+<meta chrset="utf-8" />
+<title>Countdown Timer</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="countdown-container">
+    <h1>Countdown to end of today 🎉</h1>
+    <h2>You have ...</h2>
+    <div class="time-container">
+      <p class="time"><span id="hour"></span>hours</p>
+      <p class="time"><span id="min"></span>minutes</p>
+      <p class="time"><span id="sec"></span>seconds</p>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
