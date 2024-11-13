@@ -4,7 +4,7 @@ body {
   background-color: white;
   gap: 42px;
   justify-items: center;
-  flex-grow: 1;
+  height: 100%;
 }
 
 .input-wrapper {
@@ -27,6 +27,7 @@ input[type="datetime-local"] {
   justify-content: center;
   color: black;
   display: flex;
+  height: 110%;
   
   & > .time {
     border-radius: 8px;
