@@ -18,7 +18,7 @@ function countDown(unixEndDate) {
     minute.innerHTML = "00";
     second.innerHTML = "00";
   } else {
-    minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
+    minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}` & "は";
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
 }
