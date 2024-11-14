@@ -1,7 +1,8 @@
-const mada = document.getElementById('mada');
-const mou = document.getElementById('mou');
-const minute = document.getElementById('minute');
-const second = document.getElementById('second');
+const atama = document.getElementById('atama');
+const nokori = document.getElementById('nokori');
+const osiri = document.getElementById('osiri');
+/*const minute = document.getElementById('minute');
+const second = document.getElementById('second');*/
 
 function countDown(unixEndDate) {
   // 現時刻をUnixTimeで取得
@@ -15,11 +16,17 @@ function countDown(unixEndDate) {
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
   if (leftDate < 0){
-    minute.innerHTML = "00";
-    second.innerHTML = "00";
+    /*minute.innerHTML = "00";
+    second.innerHTML = "00";*/
+    atama.innerHTML = "";
+    nokori.innerHTML = "お時間になりました";
+    osiri.innerHTML = "";
   } else {
-    minute.innerHTML = `は${leftMinuteDate.toString().padStart(2, '0')}`;
-    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
+    /*minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
+    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;*/
+    atama.innerHTML = "残り ";
+    nokori.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}：${leftSecondDate.toString().padStart(2, '0')}`;
+    osiri.innerHTML = " です";
   }
 }
 
