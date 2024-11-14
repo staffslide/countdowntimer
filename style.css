@@ -52,7 +52,7 @@ input[type="datetime-local"] {
   }
   & > .ojikan {
     margin-left: 4px;
-    font-size: 150px;
+    font-size: 125px;
     font-weight: bold;
     color: red;
   }
