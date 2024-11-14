@@ -17,9 +17,9 @@ function countDown(unixEndDate) {
   if (leftDate < 0){
     minute.innerHTML = "00";
     second.innerHTML = "00";
-    mou.classLList.remove("countdown-wrapper");
+    mou.classList.remove("countdown-wrapper");
   } else {
-    //mada.classLList.remove("countdown-wrapper");
+    //mada.classList.remove("countdown-wrapper");
     minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
