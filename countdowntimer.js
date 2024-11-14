@@ -20,10 +20,10 @@ function countDown(unixEndDate) {
     mou.innerHTML = "お時間になりました";
     osiri.innerHTML = "";
   } else {
-    atama.innerHTML = "残り ";
+    atama.innerHTML = "残り　";
     nokori.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}：${leftSecondDate.toString().padStart(2, '0')}`;
     mou.innerHTML = "";
-    osiri.innerHTML = " です";
+    osiri.innerHTML = "　です";
   }
 }
 
