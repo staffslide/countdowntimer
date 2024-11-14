@@ -1,8 +1,7 @@
 /*const day = document.getElementById('day');
-const hour = document.getElementById('hour');
+const hour = document.getElementById('hour');*/
 const minute = document.getElementById('minute');
-const second = document.getElementById('second');*/
-const shu = document.getElementById('shu');
+const second = document.getElementById('second');
 
 function countDown(unixEndDate) {
   // 現時刻をUnixTimeで取得
@@ -16,13 +15,11 @@ function countDown(unixEndDate) {
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
   if (leftDate < 0){
-    /*minute.innerHTML = "0";
-    second.innerHTML = "0";*/
-    shu.innerHTML = 'お時間になりました';
+    minute.innerHTML = "0";
+    second.innerHTML = "0";
   } else {
-    /*minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
-    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;*/
-    shu.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
+    minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
+    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
 
 const datetime = document.getElementById('datetime');
