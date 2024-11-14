@@ -50,4 +50,10 @@ input[type="datetime-local"] {
     margin-left: 4px;
     font-size: 80px;
   }
+  & > .ojikan {
+    margin-left: 4px;
+    font-size: 150px;
+    font-weight: bold;
+    color: red;
+  }
 }
