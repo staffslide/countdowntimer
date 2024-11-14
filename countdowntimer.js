@@ -15,8 +15,8 @@ function countDown(unixEndDate) {
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
   if (leftDate < 0){
-    /*minute.innerHTML = "0";
-    second.innerHTML = "0";*/
+    minute.innerHTML = "00";
+    second.innerHTML = "00";
     mou.classLList.remove("countdown-wrapper");
   } else {
     mada.classLList.remove("countdown-wrapper");
