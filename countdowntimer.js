@@ -10,7 +10,7 @@ function countDown(unixEndDate) {
   let leftDate = unixEndDate - unixCurrentDate;
   // 目標時刻と現時刻の差から残り時間を計算
   //let leftDayDate = Math.floor(leftDate / (1000 * 60 * 60 * 24));
-  let leftHourDate = Math.floor((leftDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + (((leftDate / (1000 * 60 * 60 * 24))) * 24));
+  let leftHourDate = Math.floor((leftDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + (((leftDate / (1000 * 60 * 60 * 24))) * 24) - 5);
   let leftMinuteDate = Math.floor((leftDate % (1000 * 60 * 60)) / (1000 * 60));
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
@@ -22,7 +22,7 @@ function countDown(unixEndDate) {
   } else {
    // day.innerHTML = `${leftDayDate}`;
     hour.innerHTML = `${leftHourDate}`;
-    minute.innerHTML = `${leftMinuteDate}`;
+    minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
 }
