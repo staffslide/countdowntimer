@@ -9,8 +9,8 @@ function countDown(unixEndDate) {
   // 目標時刻と現時刻の差をUnixTimeで計算
   let leftDate = unixEndDate - unixCurrentDate;
   // 目標時刻と現時刻の差から残り時間を計算
-  //let leftDayDate = Math.floor(leftDate / (1000 * 60 * 60 * 24));
-  let leftHourDate = Math.floor((leftDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + ((leftDate - (leftDate % (1000 * 60 * 60 * 24))) / (1000 * 60 * 60 * 24)) * 24);
+  let leftDayDate = Math.floor(leftDate / (1000 * 60 * 60 * 24));
+  let leftHourDate = Math.floor((leftDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) + (leftDayDate * 24));
   let leftMinuteDate = Math.floor((leftDate % (1000 * 60 * 60)) / (1000 * 60));
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
