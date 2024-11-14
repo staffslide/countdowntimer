@@ -22,7 +22,7 @@ function countDown(unixEndDate) {
   } else {
     /*minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;*/
-    shu.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}：${leftSecondDate.toString().padStart(2, '0')}`;
+    shu.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
   }
 
 const datetime = document.getElementById('datetime');
