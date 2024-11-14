@@ -15,10 +15,10 @@ function countDown(unixEndDate) {
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
   if (leftDate < 0){
-    minute.innerHTML = "き";
+    minute.innerHTML = "00";
     second.innerHTML = "00";
   } else {
-    minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}` & "は";
+    minute.innerHTML = `は${leftMinuteDate.toString().padStart(2, '0')}`;
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
 }
