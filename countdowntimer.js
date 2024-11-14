@@ -14,17 +14,15 @@ function countDown(unixEndDate) {
   let leftMinuteDate = Math.floor((leftDate % (1000 * 60 * 60)) / (1000 * 60) + (leftHourDate * 60));
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
-  /*if (leftDate < 0){
+  if (leftDate < 0){
     minute.innerHTML = "0";
     second.innerHTML = "0";
   } else {
     minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
-    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;*/
-  minute.innerHTML = "00";
+    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
+}
 
-
-  
 const datetime = document.getElementById('datetime');
 
 window.addEventListener('DOMContentLoaded', function(){
