@@ -32,12 +32,11 @@ input[type="datetime-local"] {
   color: black;
   display: flex;
   height: 110%;
+  font-size: 100px;
+  font-weight: bold;
   
-  & > .time {
+  /*& > .time {
     border-radius: 8px;
-    /*background: linear-gradient(0deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0.10) 100%), rgba(0, 0, 0, .5);*/
-    font-size: 100px;
-    font-weight: bold;
     line-height: 1;
     min-width: 48px;
     min-height: 48px;
@@ -48,5 +47,5 @@ input[type="datetime-local"] {
   }
   & > .unit {
     margin-left: 4px;
-  }
+  }*/
 }
