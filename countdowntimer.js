@@ -15,17 +15,12 @@ function countDown(unixEndDate) {
   let leftSecondDate = Math.floor((leftDate % (1000 * 60)) / 1000);
   // 残り時間を表示させる
   if (leftDate < 0){
-    //day.innerHTML = "0";
-    //hour.innerHTML = "0";
     minute.innerHTML = "0";
     second.innerHTML = "0";
   } else {
-    //day.innerHTML = `${leftDayDate}`;
-    //hour.innerHTML = `${leftHourDate}`;
     minute.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}`;
     second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
-}
 
 const datetime = document.getElementById('datetime');
 
