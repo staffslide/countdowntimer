@@ -23,7 +23,7 @@ function countDown(unixEndDate) {
    // day.innerHTML = `${leftDayDate}`;
     hour.innerHTML = `${leftHourDate}`;
     minute.innerHTML = `${leftMinuteDate}`;
-    second.innerHTML = `${leftSecondDate}`;
+    second.innerHTML = `${leftSecondDate.toString().padStart(2, '0')}`;
   }
 }
 
