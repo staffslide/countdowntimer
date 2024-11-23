@@ -43,7 +43,7 @@ input[type="datetime-local"] {
     place-items: center;
     padding: 4px;
     margin-left: 12px;
-    font-size: 600px;
+    font-size: 400px;
     font-weight: bold;
   }
   & > .unit {
