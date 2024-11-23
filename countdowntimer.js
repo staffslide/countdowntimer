@@ -18,7 +18,7 @@ function countDown(unixEndDate) {
     atama.innerHTML = "";
     nokori.innerHTML = "";
     mou.innerHTML = "お時間になりました";
-    osiri.innerHTML = "なりました";
+    osiri.innerHTML = "";
   } else {
     atama.innerHTML = "";
     nokori.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}:${leftSecondDate.toString().padStart(2, '0')}`;
