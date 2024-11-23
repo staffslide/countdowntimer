@@ -17,13 +17,13 @@ function countDown(unixEndDate) {
   if (leftDate < 0){
     atama.innerHTML = "";
     nokori.innerHTML = "";
-    mou.innerHTML = "お時間になりました";
-    osiri.innerHTML = "";
+    mou.innerHTML = "お時間に";
+    osiri.innerHTML = "なりました";
   } else {
     atama.innerHTML = "残り　";
     nokori.innerHTML = `${leftMinuteDate.toString().padStart(2, '0')}：${leftSecondDate.toString().padStart(2, '0')}`;
     mou.innerHTML = "";
-    osiri.innerHTML = "　です";
+    osiri.innerHTML = "";
   }
 }
 
