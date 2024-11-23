@@ -1,7 +1,7 @@
 /* スタイル調整 */
-html {
+/*html {
   height: 100%;
-}
+}*/
 
 body {
   align-content: center;
@@ -31,7 +31,7 @@ input[type="datetime-local"] {
   justify-content: center;
   color: black;
   display: flex;
-  height: 110%;
+  /*height: 110%;*/
   
   
   & > .time {
