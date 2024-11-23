@@ -16,7 +16,7 @@ body {
   color: black;
   gap: 4px;
   padding: 16px;
-  height: 10%;
+  height: 100%;
 }
 
 input[type="datetime-local"] {
