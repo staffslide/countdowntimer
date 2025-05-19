@@ -17,7 +17,7 @@ function countDown(unixEndDate) {
   if (leftDate < 0){
     atama.innerHTML = "";
     nokori.innerHTML = "";
-    mou.innerHTML = "お時間に\nなりました";
+    mou.innerHTML = "お時間になりました";
     osiri.innerHTML = "";
   } else {
     atama.innerHTML = "";
